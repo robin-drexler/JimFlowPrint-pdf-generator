@@ -19,5 +19,5 @@ visit ```/template?text=lalala``` to see it in action.
 ```gulp test``` or ```npm test```. Currently the app MUST NOT be launched prior to executing tests, since the tests will start the app on same port. 
 
 ## XXX
-Fix test port colliing with dev port. App should also be able to run on :80 in prod.
+Fix test port colliding with dev port. App should also be able to run on :80 in prod.
  
