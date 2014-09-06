@@ -1,4 +1,4 @@
-/* line 1, ../A6_template.sass */
+/* line 1, ../template.sass */
 .ticket, .ticket-repo, .ticket-reporter, .ticket-id, .ticket-title {
   box-sizing: border-box;
   font-size: 14pt;
@@ -6,7 +6,7 @@
   display: inline-block;
   margin: 0; }
 
-/* line 8, ../A6_template.sass */
+/* line 8, ../template.sass */
 .ticket {
   width: 148mm;
   height: 105mm;
@@ -14,17 +14,17 @@
   padding: 5mm;
   font-family: "Helvetica Neue", Roboto, Arial; }
 
-/* line 24, ../A6_template.sass */
+/* line 24, ../template.sass */
 .ticket-id {
   font-size: 36pt;
   float: left;
   margin-right: 0.5em; }
 
-/* line 33, ../A6_template.sass */
+/* line 33, ../template.sass */
 .ticket-reporter::before {
   background-image: url(images/reporter.png); }
 
-/* line 36, ../A6_template.sass */
+/* line 36, ../template.sass */
 .ticket-title {
   display: block;
   font-size: 36pt;
@@ -32,7 +32,7 @@
   margin-top: 5mm;
   border-top: 2px solid #444444; }
 
-/* line 49, ../A6_template.sass */
+/* line 49, ../template.sass */
 .ticket-reporter::before, .github::before, .bug::before, .feature::before {
   display: inline-block;
   content: "\00a0";
@@ -42,16 +42,14 @@
   background-size: 100%;
   margin-right: 7pt; }
 
-/* line 61, ../A6_template.sass */
+/* line 61, ../template.sass */
 .github::before {
   background-image: url(images/github_circle_black-128.png); }
 
-/* line 66, ../A6_template.sass */
+/* line 66, ../template.sass */
 .bug::before {
   background-image: url(images/bug.png); }
 
-/* line 71, ../A6_template.sass */
+/* line 71, ../template.sass */
 .feature::before {
   background-image: url(images/feature.png); }
-
-/*# sourceMappingURL=A6_template.css.map */
