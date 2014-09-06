@@ -1,5 +1,5 @@
 # Purpose
-Generates a ticket template as pdf, embedding provides ticket data (type, text etc).
+Generates a ticket template as pdf, embedding provided ticket data (type, text etc).
 
 PDFs will be used for further processing (printing).
 
