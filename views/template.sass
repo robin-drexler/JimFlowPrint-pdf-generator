@@ -5,46 +5,6 @@
   display: inline-block
   margin: 0
 
-.ticket
-  @extend %reset-element
-  width: 148mm
-  height: 105mm
-  background-color: #ddd
-  padding: 5mm
-  font-family: "Helvetica Neue", Roboto, Arial
-
-
-.ticket-repo
-  @extend %reset-element
-
-.ticket-reporter
-  @extend %reset-element
-  // margin-left: 5mm
-
-.ticket-id
-  @extend %reset-element
-  font-size: 36pt
-  float: left
-  margin-right: 0.5em
-
-.ticket-reporter
-  @extend %reset-element
-  @extend %icon
-  &::before
-    background-image: url(images/reporter.png)
-
-.ticket-title
-  @extend %reset-element
-  display: block
-  font-size: 36pt
-  clear: both
-  margin-top: 5mm
-  border-top: 2px solid #444
-
-
-
-
-
 %icon
   &::before
     display: inline-block
@@ -54,19 +14,33 @@
     background-repeat: no-repeat
     background-size: 100%
     margin-right: 7pt
+    z-index: 1000
+
+.ticket
+  @extend %reset-element
+  width: 148mm
+  height: 105mm
+  padding: 5mm
+
+.ticket-repo,
+.ticket-reporter,
+.ticket-id,
+.ticket-reporter,
+.ticket-title
+  @extend %reset-element
 
 
-.github
+.ticket-reporter
   @extend %icon
-  &::before
-    background-image: url(images/github_circle_black-128.png)
 
-.bug
-  @extend %icon
-  &::before
-    background-image: url(images/bug.png)
+.ticket-id
+  float: left
+.ticket-title
+  display: block
+  clear: both
+  z-index: 10000
 
+.github,
+.bug,
 .feature
   @extend %icon
-  &::before
-    background-image: url(images/feature.png)

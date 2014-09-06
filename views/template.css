@@ -1,55 +1,39 @@
 /* line 1, ../template.sass */
-.ticket, .ticket-repo, .ticket-reporter, .ticket-id, .ticket-title {
+.ticket, .ticket-repo,
+.ticket-reporter,
+.ticket-id,
+.ticket-title {
   box-sizing: border-box;
   font-size: 14pt;
   font-weight: normal;
   display: inline-block;
   margin: 0; }
 
-/* line 8, ../template.sass */
-.ticket {
-  width: 148mm;
-  height: 105mm;
-  background-color: #dddddd;
-  padding: 5mm;
-  font-family: "Helvetica Neue", Roboto, Arial; }
-
-/* line 24, ../template.sass */
-.ticket-id {
-  font-size: 36pt;
-  float: left;
-  margin-right: 0.5em; }
-
-/* line 33, ../template.sass */
-.ticket-reporter::before {
-  background-image: url(images/reporter.png); }
-
-/* line 36, ../template.sass */
-.ticket-title {
-  display: block;
-  font-size: 36pt;
-  clear: both;
-  margin-top: 5mm;
-  border-top: 2px solid #444444; }
-
-/* line 49, ../template.sass */
-.ticket-reporter::before, .github::before, .bug::before, .feature::before {
+/* line 9, ../template.sass */
+.ticket-reporter::before, .github::before,
+.bug::before,
+.feature::before {
   display: inline-block;
   content: "\00a0";
   height: 1em;
   width: 1em;
   background-repeat: no-repeat;
   background-size: 100%;
-  margin-right: 7pt; }
+  margin-right: 7pt;
+  z-index: 1000; }
 
-/* line 61, ../template.sass */
-.github::before {
-  background-image: url(images/github_circle_black-128.png); }
+/* line 19, ../template.sass */
+.ticket {
+  width: 148mm;
+  height: 105mm;
+  padding: 5mm; }
 
-/* line 66, ../template.sass */
-.bug::before {
-  background-image: url(images/bug.png); }
+/* line 36, ../template.sass */
+.ticket-id {
+  float: left; }
 
-/* line 71, ../template.sass */
-.feature::before {
-  background-image: url(images/feature.png); }
+/* line 38, ../template.sass */
+.ticket-title {
+  display: block;
+  clear: both;
+  z-index: 10000; }
