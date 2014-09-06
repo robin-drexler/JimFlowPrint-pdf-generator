@@ -31,7 +31,7 @@ gulp.task('sass', function () {
     return gulp.src(sources.sass)
         .pipe(sass(
               {
-                sourcemap: true,
+                sourcemap: false,
                 // sourcemapPath: '/sass',
                 lineNumbers: true,
                 bundleExec: true
