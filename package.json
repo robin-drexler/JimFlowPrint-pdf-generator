@@ -13,5 +13,9 @@
     "gulp": "^3.8.7",
     "gulp-nodemon": "^1.0.4",
     "jade": "^1.6.0"
+  },
+  "devDependencies": {
+    "jsdom": "^1.0.0-pre.6",
+    "mocha": "^1.21.4"
   }
 }
