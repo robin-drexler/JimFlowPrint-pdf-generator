@@ -1,0 +1,60 @@
+%reset-element
+  box-sizing: border-box
+  font-size: 14pt
+  font-weight: normal
+  display: inline-block
+
+.ticket
+  @extend %reset-element
+  width: 148mm
+  height: 105mm
+  background-color: #ddd
+  padding: 5mm
+  font-family: "Helvetica Neue", Roboto, Arial
+
+
+.ticket-repo
+  @extend %reset-element
+
+.ticket-reporter
+  @extend %reset-element
+  // margin-left: 5mm
+
+.ticket-id
+  @extend %reset-element
+  font-size: 36pt
+  float: left
+  margin-right: 0.5em
+
+
+.ticket-reporter
+  @extend %reset-element
+  @extend %icon
+  &::before
+    background-image: url(images/reporter.png)
+
+%icon
+  &::before
+    display: inline-block
+    content: "\00a0"
+    height: 1em
+    width: 1em
+    background-repeat: no-repeat
+    background-size: 100%
+    margin-right: 7pt
+
+
+.github
+  @extend %icon
+  &::before
+    background-image: url(images/github_circle_black-128.png)
+
+.bug
+  @extend %icon
+  &::before
+    background-image: url(images/bug.png)
+
+.feature
+  @extend %icon
+  &::before
+    background-image: url(images/feature.png)
