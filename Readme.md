@@ -11,7 +11,7 @@ Install needed packages: ```npm install```. Boot up the app: ```gulp dev```
 Go to: [http://localhost:3000/](http://localhost:3000)
 
 ## Current state
-Can render a view with template data included. (no pdf, just html)
+Can render a view with template data included. (no pdf, just html).
 visit ```/template?text=lalala``` to see it in action.
 
 
