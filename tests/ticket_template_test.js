@@ -1,6 +1,5 @@
 var jsdom = require('jsdom');
 var expect = require('chai').expect;
-var app = require('../app').app;
 var testSetup = require('./setup').setup;
 queryString = require('querystring');
 
@@ -43,7 +42,6 @@ describe('ticket view', function () {
 
   it('does not contain repo, if there is none set', function (done) {
     jsdom.env({
-      url: 'http://localhost:3000/A6_template?',
       url: 'http://localhost:3000/A6_template?',
       done: function (err, window) {
         try {
