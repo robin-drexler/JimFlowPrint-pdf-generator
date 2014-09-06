@@ -1,4 +1,4 @@
-![](https://travis-ci.org/robin-drexler/JimFlowPrint-pdf-generator.svg?branch=master)
+[![](https://travis-ci.org/robin-drexler/JimFlowPrint-pdf-generator.svg?branch=master)](https://travis-ci.org/robin-drexler/JimFlowPrint-pdf-generator)
 # Purpose
 Generates a ticket template as pdf, embedding provided ticket data (type, text etc).
 
