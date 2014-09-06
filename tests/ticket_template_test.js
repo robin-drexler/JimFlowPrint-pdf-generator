@@ -13,7 +13,7 @@ describe('ticket view', function () {
       id: '12',
       type: 'feature',
       reporter: 'Werner',
-      text: 'Text is good!'
+      title: 'Text is good!'
     };
     var query = '?';
 
@@ -29,8 +29,9 @@ describe('ticket view', function () {
 
         expect(querySelector('.ticket-id').innerHTML).to.have.string(expectedData.id);
         expect(querySelector('.ticket-reporter').innerHTML).to.have.string(expectedData.reporter);
-        expect(querySelector('.ticket-type').innerHTML).to.have.string(expectedData.type);
-        expect(querySelector('.ticket-text').innerHTML).to.have.string(expectedData.text);
+        // type has become an icon, need to test for background-image of content::before
+        // expect(querySelector('.ticket-type').innerHTML).to.have.string(expectedData.type);
+        expect(querySelector('.ticket-title').innerHTML).to.have.string(expectedData.title);
 
         done();
       }
