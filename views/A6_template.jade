@@ -1,0 +1,13 @@
+doctype html
+
+html
+    head
+        link(rel="stylesheet" href="A6_template.css")
+    body.ticket
+      .ticket-metadata
+        .ticket-type #{ticket.type}
+        .ticket-id #{ticket.id}
+        .ticket-reporter #{ticket.reporter}
+        .ticket-repo #{ticket.repo}
+      .ticket-title
+        h1.ticket-title #{ticket.title}

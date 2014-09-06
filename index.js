@@ -10,5 +10,11 @@ app.get('/template', function (req, res) {
   });
 });
 
+app.get('/A6_template', function (req, res) {
+  res.render('A6_template', {
+    ticket: req.query
+  });
+});
+
 app.listen(PORT);
 console.log('Server started');

@@ -11,6 +11,10 @@ Install needed packages: ```npm install```. Boot up the app: ```gulp dev```
 
 Go to: [http://localhost:3000/](http://localhost:3000)
 
+## Check out a view
+
+http://localhost:3000/A6_template?title=I+love+chocolate+ice+cream*+chupa+chups+I+love.+Gummi+bears+I+love+wafer+marzipan+jujubes+sweet+tootsie+roll+bear+claw.+Dessert+gingerbread+drag%C3%A9e+sweet+roll+liquorice+fruitcake+marzipan+donut.+I+love+I+love+sugar+plum+marshmallow+jujubes.+Cotton+candy+jujubes+oat+cake+chocolate+cake+chocolate+cake+marshmallow+bear+claw+chocolate+cake.+Jelly+cupcake+gingerbread+I+love+cupcake+sesame+snaps+apple+pie+oat+cake.&id=713&type=bug&reporter=filtercake&repo=JimFlowPrint_pdf_generator
+
 ## Current state
 Can render a view with template data included. (no pdf, just html).
 visit ```/template?text=lalala``` to see it in action.
