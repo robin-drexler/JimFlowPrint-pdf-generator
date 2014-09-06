@@ -2,7 +2,7 @@ var jsdom = require('jsdom');
 var expect = require('chai').expect;
 var app = require('../app').app;
 
-var TICKET_VIEW = 'A6_template';
+var TICKET_VIEW = 'ticket';
 
 describe('ticket view', function () {
 
@@ -20,6 +20,7 @@ describe('ticket view', function () {
     app.render(TICKET_VIEW, {
       ticket: expectedData
     }, function (err, html) {
+      console.log(err);
       jsdom.env({
         html: html,
         done: function (err, window) {
