@@ -3,6 +3,7 @@
   font-size: 14pt
   font-weight: normal
   display: inline-block
+  margin: 0
 
 .ticket
   @extend %reset-element
@@ -26,12 +27,23 @@
   float: left
   margin-right: 0.5em
 
-
 .ticket-reporter
   @extend %reset-element
   @extend %icon
   &::before
     background-image: url(images/reporter.png)
+
+.ticket-title
+  @extend %reset-element
+  display: block
+  font-size: 36pt
+  clear: both
+  margin-top: 5mm
+  border-top: 2px solid #444
+
+
+
+
 
 %icon
   &::before
