@@ -6,9 +6,7 @@ app.set('view engine', 'jade');
 
 app.get('/template', function (req, res) {
   res.render('ticket', {
-    ticket: {
-      id: 23
-    }
+    ticket: req.query
   });
 });
 

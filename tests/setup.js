@@ -19,8 +19,8 @@ exports.setup = {
       console.log('ERROR: ',data.toString());
     });
   },
-  done: function(done) {
+  done: function(doneCallback) {
     this.app.kill('SIGHUP');
-    done();
+    doneCallback();
   }
 };
