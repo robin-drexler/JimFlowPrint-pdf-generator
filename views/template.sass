@@ -1,0 +1,46 @@
+%reset-element
+  box-sizing: border-box
+  font-size: 14pt
+  font-weight: normal
+  display: inline-block
+  margin: 0
+
+%icon
+  &::before
+    display: inline-block
+    content: "\00a0"
+    height: 1em
+    width: 1em
+    background-repeat: no-repeat
+    background-size: 100%
+    margin-right: 7pt
+    z-index: 1000
+
+.ticket
+  @extend %reset-element
+  width: 148mm
+  height: 105mm
+  padding: 5mm
+
+.ticket-repo,
+.ticket-reporter,
+.ticket-id,
+.ticket-reporter,
+.ticket-title
+  @extend %reset-element
+
+
+.ticket-reporter
+  @extend %icon
+
+.ticket-id
+  float: left
+.ticket-title
+  display: block
+  clear: both
+  z-index: 10000
+
+.github,
+.bug,
+.feature
+  @extend %icon

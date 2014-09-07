@@ -1,0 +1,52 @@
+/* line 1, ../swiss.sass */
+body {
+  background-color: #dddddd; }
+
+/* line 3, ../swiss.sass */
+.ticket {
+  font-family: "Helvetica Neue", Roboto, Arial;
+  text-shadow: white 0.7mm 0.7mm;
+  background-color: white; }
+
+/* line 9, ../swiss.sass */
+.ticket-id.ticket-type {
+  font-size: 36pt;
+  margin-right: 0.5em; }
+
+/* line 15, ../swiss.sass */
+.ticket-reporter::before {
+  background-image: url(images/reporter.png); }
+
+/* line 17, ../swiss.sass */
+.ticket-title {
+  font-size: 36pt;
+  margin-top: 5mm;
+  border-top: 2px solid #444444; }
+
+/* line 25, ../swiss.sass */
+.feature,
+.bug,
+.task {
+  position: relative; }
+  /* line 29, ../swiss.sass */
+  .feature::before,
+  .bug::before,
+  .task::before {
+    position: absolute;
+    width: 90mm;
+    height: 105mm;
+    left: 48mm;
+    opacity: 0.3; }
+
+/* line 39, ../swiss.sass */
+.feature::before {
+  background-image: url(images/feature.png); }
+
+/* line 42, ../swiss.sass */
+.bug::before {
+  background-image: url(images/bug.png);
+  left: 60mm; }
+
+/* line 49, ../swiss.sass */
+.github::before {
+  background-image: url(images/github_circle_black-128.png); }

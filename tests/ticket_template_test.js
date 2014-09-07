@@ -19,7 +19,7 @@ describe('ticket view', function () {
     var query = queryString.stringify(expectedData);
 
     jsdom.env({
-      url: 'http://localhost:3000/A6_template?' + query,
+      url: 'http://localhost:3000/template?' + query,
       done: function (err, window) {
         try {
           var querySelector = window.document.querySelector.bind(window.document);
@@ -42,7 +42,7 @@ describe('ticket view', function () {
 
   it('does not contain repo, if there is none set', function (done) {
     jsdom.env({
-      url: 'http://localhost:3000/A6_template?',
+      url: 'http://localhost:3000/template?',
       done: function (err, window) {
         try {
           var querySelector = window.document.querySelector.bind(window.document);

@@ -1,0 +1,39 @@
+/* line 1, ../template.sass */
+.ticket, .ticket-repo,
+.ticket-reporter,
+.ticket-id,
+.ticket-title {
+  box-sizing: border-box;
+  font-size: 14pt;
+  font-weight: normal;
+  display: inline-block;
+  margin: 0; }
+
+/* line 9, ../template.sass */
+.ticket-reporter::before, .github::before,
+.bug::before,
+.feature::before {
+  display: inline-block;
+  content: "\00a0";
+  height: 1em;
+  width: 1em;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-right: 7pt;
+  z-index: 1000; }
+
+/* line 19, ../template.sass */
+.ticket {
+  width: 148mm;
+  height: 105mm;
+  padding: 5mm; }
+
+/* line 36, ../template.sass */
+.ticket-id {
+  float: left; }
+
+/* line 38, ../template.sass */
+.ticket-title {
+  display: block;
+  clear: both;
+  z-index: 10000; }

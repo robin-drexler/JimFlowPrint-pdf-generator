@@ -2,10 +2,19 @@ doctype html
 
 html
     head
+        link(rel="stylesheet" href="template.css")
+        link(rel="stylesheet" href='#{ticket.style}.css')
     body
-        h1 Here be printable design :)
+        .ticket
+            .metadata
+                .ticket-id.ticket-type(class='#{ticket.type}')
+                    | ##{ticket.id}
+            .ticket-engine(class='#{ticket.engine}')
+                if ticket.repo
+                    .ticket-repo #{ticket.repo}
 
-        .ticket-id #{ticket.id}
-        .ticket-type #{ticket.type}
-        .ticket-reporter #{ticket.reporter}
-        .ticket-text #{ticket.text}
+
+            .ticket-reporter #{ticket.reporter}
+
+
+            .ticket-title #{ticket.title}
