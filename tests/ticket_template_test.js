@@ -1,8 +1,5 @@
 var jsdom = require('jsdom');
 var expect = require('chai').expect;
-var app = require('../app').app;
-
-var TICKET_VIEW = 'ticket';
 var testSetup = require('./setup').setup;
 queryString = require('querystring');
 
@@ -22,7 +19,7 @@ describe('ticket view', function () {
     var query = queryString.stringify(expectedData);
 
     jsdom.env({
-      url: 'http://localhost:3000/A6_template?' + query,
+      url: 'http://localhost:3000/template?' + query,
       done: function (err, window) {
         try {
           var querySelector = window.document.querySelector.bind(window.document);
@@ -30,23 +27,12 @@ describe('ticket view', function () {
           expect(querySelector('.ticket-id').innerHTML).to.have.string(expectedData.id);
           expect(querySelector('.ticket-reporter').innerHTML).to.have.string(expectedData.reporter);
 
-    app.render(TICKET_VIEW, {
-      ticket: expectedData
-    }, function (err, html) {
-      console.log(err);
-      jsdom.env({
-        html: html,
-        done: function (err, window) {
-          try {
-            var querySelector = window.document.querySelector.bind(window.document);
-            expect(querySelector('.metadata').innerHTML).to.have.string(expectedData.id);
-            expect(querySelector('.ticket-reporter').innerHTML).to.have.string(expectedData.reporter);
-            expect(querySelector('.metadata').innerHTML).to.have.string(expectedData.type);
-            expect(querySelector('.ticket-title').innerHTML).to.have.string(expectedData.title);
-            expect(querySelector('.ticket-repo').innerHTML).to.have.string(expectedData.repo);
-            // an element has class named like type
-            expect(querySelector('.' + expectedData.type)).not.to.be.null;
-            done(e);
+          // an element has class named like type
+          expect(querySelector('.' + expectedData.type)).not.to.be.null;
+          expect(querySelector('.ticket-title').innerHTML).to.have.string(expectedData.title);
+          expect(querySelector('.ticket-repo').innerHTML).to.have.string(expectedData.repo);
+          done();
+
         } catch (e) {
           done(e);
         }
@@ -56,7 +42,7 @@ describe('ticket view', function () {
 
   it('does not contain repo, if there is none set', function (done) {
     jsdom.env({
-      url: 'http://localhost:3000/A6_template?',
+      url: 'http://localhost:3000/template?',
       done: function (err, window) {
         try {
           var querySelector = window.document.querySelector.bind(window.document);
