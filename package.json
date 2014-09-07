@@ -12,13 +12,17 @@
     "express": "^4.8.8",
     "gulp": "^3.8.7",
     "gulp-nodemon": "^1.0.4",
+    "gulp-ruby-sass": "^0.7.1",
     "jade": "^1.6.0",
-    "gulp-ruby-sass": "^0.7.1"
+    "tmp": "0.0.24"
   },
   "devDependencies": {
     "chai": "^1.9.1",
     "gulp-mocha": "^1.0.0",
     "jsdom": "^1.0.0-pre.6",
-    "mocha": "^1.21.4"
+    "mime": "^1.2.11",
+    "mocha": "^1.21.4",
+    "proxyquire": "^1.0.1",
+    "sinon": "^1.10.3"
   }
 }
