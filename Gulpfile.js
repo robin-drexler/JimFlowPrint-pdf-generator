@@ -2,7 +2,7 @@
 var gulp = require('gulp');
 var nodemon = require('gulp-nodemon');
 var mocha = require('gulp-mocha');
-var sass = require('gulp-ruby-sass');
+var sass = require('gulp-sass');
 
 gulp.task('dev', function () {
   nodemon({ script: 'index.js', ext: 'js'})
@@ -29,14 +29,7 @@ destinations = {
 
 gulp.task('sass', function () {
     return gulp.src(sources.sass)
-        .pipe(sass(
-              {
-                sourcemap: false,
-                // sourcemapPath: '/sass',
-                lineNumbers: true,
-                bundleExec: true
-              }
-              ))
+        .pipe(sass())
         .on('error', function (err) { console.log(err.message); })
         .pipe(gulp.dest(destinations.css));
 });
