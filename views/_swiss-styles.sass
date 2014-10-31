@@ -1,0 +1,54 @@
+
+body
+    background-color: #ddd
+.ticket
+    font-family: "Helvetica Neue", Roboto, Arial
+    text-shadow: #fff 0.7mm 0.7mm
+    background-color: #fff
+
+.metadata
+.ticket-id.ticket-type
+    font-size: 36pt
+    margin-right: 0.5em
+.ticket-engine
+.ticket-repo
+.ticket-reporter
+    &::before
+        background-image: url(images/reporter.png)
+.ticket-title
+    font-size: 36pt
+    margin-top: 5mm
+    border-top: 2px solid #444
+
+
+
+// types
+.feature,
+.bug,
+.task
+    position: relative
+    &::before
+        position: absolute
+        width: 90mm
+        height: 105mm
+        left: 48mm
+        opacity: 0.3
+
+
+
+.feature
+    &::before
+        background-image: url(images/feature.png)
+.bug
+    &::before
+        background-image: url(images/bug.png)
+        left: 60mm
+.task
+
+// engines
+.github
+    &::before
+        background-image: url(images/github_circle_black-128.png)
+.trac
+.jira
+.trello
